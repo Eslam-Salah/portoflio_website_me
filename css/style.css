@@ -1,0 +1,692 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.clear{
+    clear: both;
+}
+
+/****************************** General Content *************************************/
+.work .caption h2, .Portfolio .caption h2, .profile .caption h2, .contact .caption h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.work .caption span.line, .Portfolio .caption span.line, .profile .caption span.line,
+.contact .caption span.line{
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #eb5424;
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+.work .caption{
+    width: 170px;
+}
+.Portfolio .caption{
+    width: 250px;
+}
+.profile .caption{
+    width: 210px;
+}
+.profile-skills .caption{
+    width: 240px;
+}
+.contact .caption{
+    width: 224px;
+    margin: auto;
+}
+.contact .caption span.line{
+    margin-left: 6px;
+}
+
+.work .caption:hover span.line{
+    width: 158px;
+}
+.Portfolio .caption:hover span.line{
+    width: 227px;
+}
+.profile .caption:hover span.line{
+    width: 185px;
+}
+.profile-skills .caption:hover span.line{
+    width: 221px;
+}
+.contact .caption:hover span.line{
+    width: 211px;
+}
+
+/****************************** Header Section *************************************/
+header{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 128;
+    position: relative;
+}
+
+header .logo{
+    width: 35%;
+    float: left;
+}
+header .logo p{
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #eb5424;
+}
+
+header input, header label{
+    position: absolute;
+    top: -10px;
+    right: 25px;
+}
+
+header label{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/Navbar/open.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+header input:checked ~ nav ul{
+    display: block;
+}
+header input:checked ~ label{
+    background: url(../images/Navbar/close.png) no-repeat;
+    background-size: cover;
+}
+
+header input{
+    display: none;
+}
+
+header nav ul{
+    width: 65%;
+    text-align: center;
+    float: right;
+    list-style: none;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 20px 5px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 20px;
+}
+header nav ul li a:hover{
+    color: #eb5424;
+}
+
+/****************************** Home Section *************************************/
+section.home{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../images/Home/home-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+}
+
+.home-content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-content h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(160, 158, 158);
+}
+.home-content h3{
+    font-size: 30px;
+    color: #eb5424;
+    margin: 15px;
+}
+.home-content p{
+    font-size: 20px;
+    color: #888;
+    line-height: 1.5;
+}
+.home-content p span{
+    color: #eb5424;
+    font-weight: 500;
+}
+.home-content button{
+    width: 130px;
+    margin-top: 25px;
+    padding: 15px;
+    background: #eb5424;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.home-content button:hover{
+    background: #34465d;
+    color: #fff;
+    font-size: 20px;
+}
+/****************************** Work Section *************************************/
+section.work{
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+.work-items{
+    width: 30%;
+    float: left;
+    padding: 25px 20px;
+    text-align: center;
+    border: 1px solid #eb5424;
+    border-radius: 5px;
+}
+.work-items i{
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.work-items:hover i{
+    background: #eb5424;
+    color: #fff;
+    border: 0;
+}
+.work-items h3{
+    margin: 20px 0;
+    color: #eb5424;
+    font-size: 25px;
+}
+.work-items hr.line{
+    width: 180px;
+    height: 2px;
+    margin: 20px auto;
+    background: #888;
+}
+.work-items p{
+    text-align: left;
+    line-height: 1.4;
+    color: #999;
+}
+
+.work-items.mg{
+    margin: 0 5%;
+}
+/****************************** Portfolio Section *************************************/
+section.Portfolio{
+    padding-top: 50px;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.Portfolio-list{
+    float: right;
+    margin-bottom: 50px;
+}
+.Portfolio-list ul{
+    list-style: none;
+}
+.Portfolio-list ul li{
+    display: inline-block;
+    margin-left: 5px;
+}
+.Portfolio-list ul li a{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.Portfolio-list ul li a:hover{
+    color: #eb5424;
+}
+.Portfolio-list ul li a.active{
+    background: #eb5424;
+    color: #fff;
+}
+
+.Portfolio input, .Portfolio label{
+    position: absolute;
+    top: 50px;
+    right: 25px;
+}
+
+.Portfolio label{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/Navbar/open.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.Portfolio input:checked ~ .Portfolio-list ul{
+    display: block;
+}
+.Portfolio input:checked ~ label{
+    background: url(../images/Navbar/close.png) no-repeat;
+    background-size: cover;
+}
+
+.Portfolio input{
+    display: none;
+}
+
+.Portfolio-items{
+    width: 30%;
+    float: left;
+    margin: 15px 0;
+    position: relative;
+}
+.Portfolio-items img{
+    width: 100%;
+}
+
+.Portfolio-items .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 4px;
+    right: 0;
+    background: rgba(235,84,36 , 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.Portfolio-items:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+}
+
+.Portfolio-items .overlay button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #eb5424;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.Portfolio-items .overlay button:hover{
+    background: #eb5424;
+    color: #fff;
+}
+
+.Portfolio-items.mg{
+    margin: 15px 5%;
+}
+/****************************** Profile Section *************************************/
+section.profile{
+    background: #f8f8f8;
+}
+
+.profile-info, .profile-skills{
+    width: 50%;
+    float: left;
+    padding-top: 40px;
+}
+
+.profile-info ul{
+    list-style: none;
+}
+.profile-info ul li{
+    margin: 10px 0;
+    color: rgb(90, 89, 89);
+    font-weight: bold;
+}
+.profile-info ul li span{
+    display: inline-block;
+    width: 100px;
+    margin-right: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+}
+.profile-info ul li a{
+    text-decoration: none;
+    color: #eb5424;
+}
+
+.profile-skills p{
+    color: rgb(90, 89, 89);
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.profile-skills-items{
+    margin-bottom: 15px;
+}
+.profile-skills-items span.sp1{
+    margin-right: 65%;
+}
+.profile-skills-items span.sp2{
+    margin-right: 60%;
+}
+.profile-skills-items span.sp3{
+    margin-right: 42%;
+}
+
+.profile-skills-items span{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.profile-skills-items hr.gradiant1,
+ .profile-skills-items hr.gradiant2,
+  .profile-skills-items hr.gradiant3{
+    width: 89%;
+    height: 4px;
+    background: #eb5424;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.profile-skills-items hr.gradiant2{
+    width: 75%;
+}
+.profile-skills-items hr.gradiant3{
+    width: 65%;
+}
+/****************************** About Section *************************************/
+section.about{
+    background: #f8f8f8;
+    padding-top: 100px;
+}
+
+.about-img{
+    width: 50%;
+    float: left;
+}
+
+.about-img img{
+    width: 100%;
+}
+
+.about-info{
+    width: 50%;
+    float: left;
+    padding: 120px 30px;
+}
+
+.about-info h2{
+    font-size: 35px;
+    font-family: lucida sans;
+}
+
+.about-info span{
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #eb5424;
+}
+.about-info p{
+    color: rgb(90, 89, 89);
+    line-height: 1.4;
+}
+.about-info p.p1{
+    margin-bottom: 15px;
+}
+/****************************** Social Section *************************************/
+section.social ul{
+    list-style: none;
+    text-align: center;
+}
+
+.social ul li{
+    display: inline-block;
+    width: 33%;
+}
+.social ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+.social ul li a:hover{
+    color: #eb5424;
+}
+.social ul li a i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.social ul li a:hover i{
+    border: 1px solid #eb5424;
+}
+.social ul li a span{
+    margin-left: 5px;
+}
+.social ul li:first-child, .social ul li:nth-child(2), .social ul li:nth-child(3){
+    height: 100px;
+    line-height: 100px;
+}
+.social ul li:first-child{
+    background: #3b5998;
+}
+.social ul li:nth-child(2){
+    background: #498cbf;
+}
+.social ul li:nth-child(3){
+    background: #cd201f;
+}
+/****************************** Contact Section *************************************/
+section.contact{
+    padding-top: 80px;
+}
+
+form{
+    text-align: center;
+}
+
+form .form-input input, form input.subject{
+    height: 40px;
+    font-size: 15px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+form .form-input input{
+    width: 400px;
+    margin: 0 10px;
+}
+
+form input.subject{
+    width: 825px;
+    margin: 20px 0;
+}
+
+form textarea{
+    width: 825px;
+    resize: none;
+    font-size: 15px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact button{
+    display: block;
+    margin: 25px auto;
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    background: #34465d;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.contact button:hover{
+    background: #eb5424;
+}
+/****************************** Footer Section *************************************/
+footer {
+    width: 100%;
+    height: 50px;
+    background: #131418;
+}
+
+footer p{
+    color: #fff;
+    padding: 16px 15px;
+}
+/****************************** Media Query *************************************/
+@media (min-width: 992px){
+    header label, .Portfolio label{
+        display: none;
+    }
+}
+@media (max-width:991px){
+    header .logo{
+        width: 100%;
+        float: none;
+    }
+    header nav ul{
+        width: 100%;
+        float: none;
+        display: none;
+    }
+    header nav ul li{
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+    }
+    header nav ul li a{
+        display: block;
+        width: 100%;
+        padding: 2%;
+    }
+    header nav ul li a:hover{
+        background: #999;
+        color: #fff;
+    }  
+}
+@media (max-width:767px){
+    .home-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .home-content h2{
+        font-size: 30px;
+    }
+    .home-content h3{
+        font-size: 20px;
+        color: #eb5424;
+        margin: 15px;
+    }
+    .home-content p{
+        font-size: 17px;
+    }
+}
+@media (max-width:767px){
+    .work-items{
+        width: 70%;
+        float: none;
+        margin: 20px auto;
+    }
+    .work-items.mg{
+        margin: auto;
+    }
+    .work-items hr.line{
+        width: 50%;
+    }
+}
+@media (max-width:767px){
+    .Portfolio-list ul{
+        display: none;
+    }
+    .Portfolio-list ul li{
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+    }
+    .Portfolio-items{
+        width: 100%;
+        float: none;
+        margin: 15px auto;
+    }
+    .Portfolio-items.mg{
+        margin: auto;
+    }
+}
+@media (max-width:767px){
+    .profile-info, .profile-skills{
+        width: 100%;
+        float: none;
+    }
+}
+@media (max-width:767px){
+    .about-img{
+        width: 100%;
+        float: none;
+    }
+    .about-info{
+        width: 100%;
+        float: none;
+    }
+}
+@media (max-width:767px){
+    .social ul li{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media (max-width:767px){
+    form .form-input input, form input.subject{
+        width: 300px;
+        margin: 10px;
+    }
+    form textarea{
+        width: 300px;
+        margin: 10px;
+    }
+    .contact button{
+        width: 130px;
+        font-size: 15px;
+        margin: 20px auto;
+    }
+}
